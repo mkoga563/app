@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>画像検査システム</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- QRコード生成ライブラリ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>画像検査システム</h1>
+
+    <!-- カメラ表示 -->
+    <div class="camera-area">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- 操作 -->
+    <div class="controls">
+      <button id="captureBtn">撮影</button>
+    </div>
+
+    <!-- 判定結果 -->
+    <div id="result">
+      待機中
+    </div>
+
+    <hr>
+
+    <!-- QRコード -->
+    <h2>スマホアクセス用QRコード</h2>
+
+    <div id="accessUrl"></div>
+
+    <div id="qrcode"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
